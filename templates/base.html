@@ -35,12 +35,11 @@
             <aside class="col-2-12" id="side">
                 {% block side %}
 
-                    {% if categories %}
+                    {% if tags %}
                         <div class="widget cat">
-                            <h2>Catégories</h2>
-                            {% for cat, null in categories %}
+                            {% for tag, null in tags %}
                                 <div class="cat-link">
-                                    <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat.name }}</a>
+                                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>
                                 </div>
                             {% endfor %}
                         </div>
@@ -48,7 +47,7 @@
 
                     {% if LINKS %}
                         <div class="widget">
-                            <h2>Liens</h2>
+                            <h2>链接</h2>
                             {% for name, url in LINKS %}
                                 <div class="cat-link">
                                     <a href="{{ url }}">{{ name }}</a>
@@ -59,7 +58,7 @@
 
                     {% if SOCIAL %}
                         <div class="widget">
-                            <h2>Social</h2>
+                            <h2>社交网络</h2>
                             {% for name, url in SOCIAL %}
                                 <div class="cat-link">
                                     <a href="{{ url }}">{{ name }}</a>
